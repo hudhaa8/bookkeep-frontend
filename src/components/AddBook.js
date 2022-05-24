@@ -32,7 +32,7 @@ const AddBook = () => {
 
   const sendRequest = async() => {
     await axios
-      .post("https://620aeaff92946600171c5cbc.mockapi.io/books", {
+      .post("https://book-keep-app.herokuapp.com/books", {
         name: String(inputs.name),
         author: String(inputs.author),
         description: String(inputs.description),
