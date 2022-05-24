@@ -13,7 +13,7 @@ const Book = (props) => {
       .then((res) => res.data)
      // .then(()=>history("/"))
       //window.location.replace("/books")
-     .then(() => history("/books"));
+     .then(() => history("/"));
        
   };
   return (
