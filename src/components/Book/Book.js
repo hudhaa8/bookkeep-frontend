@@ -11,7 +11,7 @@ const Book = (props) => {
     await axios
       .delete(`https://book-keep-app.herokuapp.com/books/${_id}`)
       .then((res) => res.data)
-      .then(()=>history("/"))
+     // .then(()=>history("/"))
       //window.location.replace("/books")
      .then(() => history("/books"));
        
