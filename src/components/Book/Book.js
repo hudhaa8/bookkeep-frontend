@@ -1,19 +1,19 @@
 import React from "react";
 import "./Book.css";
-import { Link } from "react-router-dom";
+import { Link ,useNavigate} from "react-router-dom";
 import axios from "axios";
 
 const Book = (props) => {
- // const history = useNavigate();
+ const history = useNavigate();
   const { _id, name, author, description, price, image } =
     props.book;
   const deleteHandler = async () => {
     await axios
       .delete(`https://book-keep-app.herokuapp.com/books/${_id}`)
       .then((res) => res.data)
-      
-      window.location.replace("/books")
-     // .then(() => history("/books"));
+      .then(()=>history("/"))
+      //window.location.replace("/books")
+     .then(() => history("/books"));
        
   };
   return (
