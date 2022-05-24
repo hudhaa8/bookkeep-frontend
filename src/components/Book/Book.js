@@ -5,7 +5,7 @@ import axios from "axios";
 
 const Book = (props) => {
  // const history = useNavigate();
-  const { _id, name, author, description, price, available, image } =
+  const { _id, name, author, description, price, image } =
     props.book;
   const deleteHandler = async () => {
     await axios
